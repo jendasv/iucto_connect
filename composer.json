@@ -1,0 +1,16 @@
+{
+  "name" : "iucto-connect/iucto-connect-library",
+  "description": "This package purpose is to establish connect to iucto REST API",
+  "autoload" : {
+    "psr-4": {
+      "iuctoConnect\\" : "src"
+    }
+  },
+  "require": {
+    "php": ">=7.1",
+    "guzzlehttp/guzzle": "^7.2",
+    "filp/whoops": "^2.9",
+    "composer/ca-bundle": "^1.2"
+
+  }
+}
