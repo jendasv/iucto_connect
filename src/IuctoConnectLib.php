@@ -22,7 +22,7 @@ class IuctoConnectLib
 
     protected $api_key;
 
-    protected $api_version;
+    protected $api_version = "1.2";
 
     protected $client_option;
 
