@@ -15,7 +15,6 @@
   "require": {
     "php": ">=7.1",
     "guzzlehttp/guzzle": "^7.2",
-    "filp/whoops": "^2.9",
     "composer/ca-bundle": "^1.2"
 
   }
