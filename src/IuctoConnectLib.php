@@ -86,7 +86,6 @@ class IuctoConnectLib
 
         $this->client_option = $client_option;
         $this->prepared_uri = $this->prepareRequestUri($this->base_uri, $this->api_version);
-        var_dump($this->prepared_uri);
         $this->client = new Client($client_option);
     }
 
@@ -94,27 +93,27 @@ class IuctoConnectLib
 
         $client = $this->client;
         $uri = $this->createRequestUri($this->prepared_uri, self::REFERENCE["currency"]);
-        $response = $client->request($this->getMethod(), $uri, [RequestOptions::JSON => ['foo' => 'bar']] );
+        $response = $client->request($this->getMethod(), $uri, [RequestOptions::JSON => ['name' => 'value']] );
 
-        return $response->getBody()->getContents();
+        return new ResultsProcessing($response);
     }
 
     public function getPaymentType() {
 
         $client = $this->client;
         $uri = $this->createRequestUri($this->prepared_uri, self::REFERENCE["payment type"]);
-        $response = $client->request($this->getMethod(), $uri, [RequestOptions::JSON => ['foo' => 'bar']] );
+        $response = $client->request($this->getMethod(), $uri, [RequestOptions::JSON => ['name' => 'value']] );
 
-        return $response->getBody()->getContents();
+        return new ResultsProcessing($response);
     }
 
     public function getRoundingType() {
 
         $client = $this->client;
         $uri = $this->createRequestUri($this->prepared_uri, self::REFERENCE["rounding type"]);
-        $response = $client->request($this->getMethod(), $uri, [RequestOptions::JSON => ['foo' => 'bar']] );
+        $response = $client->request($this->getMethod(), $uri, [RequestOptions::JSON => ['name' => 'value']] );
 
-        return $response->getBody()->getContents();
+        return new ResultsProcessing($response);
     }
 
     private function prepareRequestUri($api_uri , $api_version ) {
