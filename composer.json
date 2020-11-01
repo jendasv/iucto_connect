@@ -1,11 +1,17 @@
 {
-  "name" : "iucto-connect/iucto-connect-library",
-  "description": "This package purpose is to establish connect to iucto REST API",
-  "autoload" : {
-    "psr-4": {
-      "iuctoConnect\\" : "src"
+  "name" : "jendasv/iucto-connect-library",
+  "type": "library",
+  "description": "This package purpose is to establish connect to iucto REST API and data exchange",
+  "keywords": ["iucto","iucto connect"],
+  "homepage": "https://github.com/jendasv/iucto_connect",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Jan Svoboda",
+      "email": "jendasv@seznam.cz",
+      "role": "deveolper"
     }
-  },
+  ],
   "require": {
     "php": ">=7.1",
     "guzzlehttp/guzzle": "^7.2",
