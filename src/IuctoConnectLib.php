@@ -12,7 +12,7 @@ class IuctoConnectLib
 {
     private $base_uri = 'https://online.iucto.cz/api';
 
-    protected $method;
+    protected $method="GET";
 
     const REFERENCE = [
         "currency" => "currency",
@@ -90,7 +90,7 @@ class IuctoConnectLib
     }
 
     public function getCurrency() {
-
+        $this->prepareConnect();
         $client = $this->client;
         $uri = $this->createRequestUri($this->prepared_uri, self::REFERENCE["currency"]);
         $response = $client->request($this->getMethod(), $uri, [RequestOptions::JSON => ['name' => 'value']] );
@@ -99,7 +99,7 @@ class IuctoConnectLib
     }
 
     public function getPaymentType() {
-
+        $this->prepareConnect();
         $client = $this->client;
         $uri = $this->createRequestUri($this->prepared_uri, self::REFERENCE["payment type"]);
         $response = $client->request($this->getMethod(), $uri, [RequestOptions::JSON => ['name' => 'value']] );
@@ -108,7 +108,7 @@ class IuctoConnectLib
     }
 
     public function getRoundingType() {
-
+        $this->prepareConnect();
         $client = $this->client;
         $uri = $this->createRequestUri($this->prepared_uri, self::REFERENCE["rounding type"]);
         $response = $client->request($this->getMethod(), $uri, [RequestOptions::JSON => ['name' => 'value']] );

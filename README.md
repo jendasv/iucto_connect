@@ -13,9 +13,6 @@ require 'vendor/autoload.php';
 use iuctoConnect\IuctoConnectLib;
 
 $connector = new IuctoConnectLib("youApiKey");
-$connector->setApiVersion("1.2");
-$connector->setMethod("GET");
-$connector->prepareConnect();
 ```
 
 
