@@ -1,12 +1,12 @@
 # iucto_connect
 Use to get info about currency, Payment methods and Rounding types.
 
-#####Install via composer
+###Install via composer
 ```
 composer require jendasv/iucto-connect-library:dev-main
 ```
 
-###How to use
+##How to use
 ```
 require 'vendor/autoload.php';
 
@@ -16,16 +16,16 @@ $connector = new IuctoConnectLib("youApiKey");
 ```
 
 
-### Methods
-####getCurrency() 
+## Methods
+###getCurrency() 
 ```
 $connector->getCurrency()->getResults();
 ```
-####getPaymentType()
+###getPaymentType()
 ```
 $connector->getPaymentType()->getResults();
 ```
-####getPaymentType()
+###getPaymentType()
 ```
 $connector->getRoundingType()->getResults();
 ```
